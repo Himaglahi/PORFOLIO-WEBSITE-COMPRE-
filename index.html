@@ -15,6 +15,7 @@
     <nav>
     <a href="#" onclick="showHome()">Home</a>
     <a href="#" onclick="showAbout()">About</a>
+    <a href="#" onclick="showSkills()">My Skills</a>
 </nav>
 
 </header>
@@ -74,28 +75,53 @@
     <h5>Love Traveling</h5>
 </section>
 
+<!-- SKILLS -->
+<section id="skills" class="skills-section fade-in">
+    <h2>My Skills</h2>
+
+    <div class="skills-box">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Git</span>
+        <span>React</span>
+    </div>
+</section>
+
+
 
 
 <!-- JS -->
 <script>
-function showAbout(){
-    const about = document.getElementById("about");
-    const home = document.getElementById("home");
-
-    home.style.display = "none";
-    about.style.display = "flex";
-
-    about.classList.remove("fade-in");
-    void about.offsetWidth; // reset animation
-    about.classList.add("fade-in");
+function hideAll(){
+    document.getElementById("home").style.display = "none";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("skills").style.display = "none";
 }
 
 function showHome(){
-    const about = document.getElementById("about");
-    const home = document.getElementById("home");
+    hideAll();
+    document.getElementById("home").style.display = "flex";
+}
 
-    about.style.display = "none";
-    home.style.display = "flex";
+function showAbout(){
+    hideAll();
+    const about = document.getElementById("about");
+    about.style.display = "flex";
+
+    about.classList.remove("fade-in");
+    void about.offsetWidth;
+    about.classList.add("fade-in");
+}
+
+function showSkills(){
+    hideAll();
+    const skills = document.getElementById("skills");
+    skills.style.display = "flex";
+
+    skills.classList.remove("fade-in");
+    void skills.offsetWidth;
+    skills.classList.add("fade-in");
 }
 </script>
 

@@ -105,6 +105,53 @@ section{
 section:nth-of-type(even){
     background-color: #0b0b0b;
 }
+
+
+/* SKILLS SECTION */
+.skills-section{
+    display: none; /* initially hidden */
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.skills-section h2{
+    font-size: 4rem;
+    color: #00ff15;
+    margin-bottom: 4rem;
+}
+
+.skills-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skills-box span{
+    padding: 1rem 2.5rem;
+    border: 2px solid #00ff15;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    color: #00ff15;
+    transition: 0.3s ease;
+    cursor: default;
+}
+
+.skills-box span:hover{
+    background-color: #00ff15;
+    color: black;
+    box-shadow: 0 0 20px #00ff15;
+    transform: scale(1.15);
+}
+
 .about-section{
     display: none;
     min-height: 100vh;
@@ -383,4 +430,6 @@ span{
         width: 70vw;
         margin-top: 4rem;
     }
+
+    
 }
