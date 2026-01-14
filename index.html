@@ -13,9 +13,10 @@
     <a href="#" class="logo">MJ PORTFOLIO</a>
 
     <nav>
-        <a href="#" onclick="showHome()">Home</a>
-        <a href="#" onclick="toggleAbout()">About</a>
-    </nav>
+    <a href="#" onclick="showHome()">Home</a>
+    <a href="#" onclick="showAbout()">About</a>
+</nav>
+
 </header>
 
 <!-- HOME -->
@@ -50,7 +51,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about-section">
+<section id="about" class="about-section fade-in">
     <h2>About Me</h2>
 
     <h5>Name: MJ MAGSALOS</h5>
@@ -59,45 +60,45 @@
 
     <h5>Race: Human</h5>
     <h5>Class: IT Student</h5>
-    <h5>Age: 19</h5>
+    <h5>Age: 21</h5>
 
     <h5>
         GitHub Codename:
         <a href="https://github.com/Himaglahi" target="_blank">Himaglahi</a>
     </h5>
 
-    <h3>Hobbies:</h3>
+    <h3>Hobbies</h3>
     <h5>Love Eating Chocolate</h5>
     <h5>Playing Online Games</h5>
     <h5>Watching Movies</h5>
     <h5>Love Traveling</h5>
 </section>
 
+
+
 <!-- JS -->
 <script>
-let aboutVisible = false;
-
-function toggleAbout(){
-    const home = document.getElementById("home");
+function showAbout(){
     const about = document.getElementById("about");
+    const home = document.getElementById("home");
 
-    if (!aboutVisible) {
-        home.style.display = "none";
-        about.style.display = "block";
-        aboutVisible = true;
-    } else {
-        about.style.display = "none";
-        home.style.display = "flex";
-        aboutVisible = false;
-    }
+    home.style.display = "none";
+    about.style.display = "flex";
+
+    about.classList.remove("fade-in");
+    void about.offsetWidth; // reset animation
+    about.classList.add("fade-in");
 }
 
 function showHome(){
-    document.getElementById("about").style.display = "none";
-    document.getElementById("home").style.display = "flex";
-    aboutVisible = false;
+    const about = document.getElementById("about");
+    const home = document.getElementById("home");
+
+    about.style.display = "none";
+    home.style.display = "flex";
 }
 </script>
+
 
 </body>
 </html>
