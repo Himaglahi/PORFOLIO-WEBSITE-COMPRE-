@@ -10,16 +10,18 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">MJ MAGSALOS</a>
+        <a href="#" class="logo">MJ PORFOLIO</a>
 
         <nav>
-            <a href="#" class="active"> Home</a>
-            <li><a href="#" onclick="navigateTo('about')">About Me</a></li>
-            <li><a href="#" onclick="navigateTo('skills')">Skills</a></li>
-            <li><a href="#" onclick="navigateTo('education')">Education</a></li>
-            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <ul>
+                
+            <a href="#" onclick="showAbout()">home</a>
+            <a href="#" onclick="showAbout()">About</a>
+            </ul>
         </nav>
     </header>
+
+
     <section class="home">
         <div class="home-img">
             <img src="mj.jpg.png" alt="">
@@ -33,8 +35,47 @@
                 <a href="#"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
+
             <a href="#" class="btn">Hire me</a>
+
+
+            <main id="about" class="about-section">
+
+
+
+                
+    <h2>About Me</h2>
+
+    <h5>Name: MJ MAGSALOS</h5>
+    <h5>Birthdate: 06/12/2004</h5>
+    <h5>Religion: Catholic</h5>
+
+    <h5>Race: Human</h5>
+    <h5>Class: IT Student</h5>
+    <h5>Age: 19</h5>
+
+    <h5>
+        GitHub Codename:
+        <a href="https://github.com/account">Himaglahi</a>
+    </h5>
+
+    <h3>Hobbies:</h3>
+    <h5>Love Eating Chocolate</h5>
+    <h5>Playing Online Games</h5>
+    <h5>Watching Movies</h5>
+    <h5>Love Traveling</h5>
+</main>
         </div>
+        <script>
+function showAbout(){
+    const about = document.getElementById("about");
+    about.style.display =
+        about.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</script>
+
     </section>
 </body>
 </html>
