@@ -23,46 +23,52 @@ body{
 }
 
 header{
-    margin-top: 20px;
+    margin-top: 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 9%;
-    background-color: transparent;
-    filter: drop-shadow(10px);
+    padding: 1.5rem 9%;
+    background-color: #00ff15; /* GREEN */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
+
 .logo{
     font-size: 3rem;
-    color: #64f322;
+    color: black; /* BLACK TEXT */
     font-weight: 800;
     cursor: pointer;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .logo:hover{
     transform: scale(1.1);
 }
 
+
 nav a{
     font-size: 1.8rem;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.1s ease;
     border-bottom: 3px solid transparent;
 }
 
-nav a:hover,
-nav a.active{
-    color: #4cf100;
-    border-bottom: 3px solid #06ff06;
+nav a:hover{
+    color: #ff0202;
 }
+
+nav a.active{
+    color: rgb(0, 0, 0);
+    border-bottom: 3px solid black;
+}
+
+
 
 @media(max-width:995px){
     nav{
@@ -191,7 +197,7 @@ section:nth-of-type(even){
     text-align: center;
     gap: 1rem;
     background-color: black;
-    color: white;
+    color: rgb(0, 243, 12);
 }
 
 .about-section h2{
