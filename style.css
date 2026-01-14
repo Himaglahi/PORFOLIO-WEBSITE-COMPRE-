@@ -101,12 +101,14 @@ section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
 }
+
 .about-section{
     display: none;
     min-height: 100vh;
     padding: 10rem 9% 5rem;
     background-color: black;
 }
+
 
 .about-section h2{
     font-size: 4rem;
